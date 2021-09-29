@@ -1,1 +1,20 @@
-<p>heroe works!</p>
+<h1>{{ heroe.nombre }}</h1>
+<hr>
+<div class="row">
+
+    <div class="col-md-8">
+        <h2><small>{{ heroe.casa }}</small></h2>
+        <h3><small>{{ heroe.aparicion }}</small></h3>
+        <p><small><strong>{{ heroe.bio }}</strong></small></p>
+        
+    </div>
+    <div class="col-md-4">
+        <img class="img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <br>        
+        <button (click)="regresarHeroe()"
+                class="btn-outline-danger btn-block">
+            Regresar
+        </button>
+        
+    </div>    
+</div>
