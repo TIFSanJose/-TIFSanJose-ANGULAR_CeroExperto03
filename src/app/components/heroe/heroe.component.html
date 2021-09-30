@@ -1,10 +1,10 @@
-<h1>{{ heroe.nombre }}</h1>
+<h1>{{ heroe.nombre | uppercase }}</h1>
 <hr>
 <div class="row">
 
     <div class="col-md-8">
         <h2><small>{{ heroe.casa }}</small></h2>
-        <h3><small>{{ heroe.aparicion }}</small></h3>
+        <h3><small>({{ heroe.aparicion | date:'y'}})</small></h3>
         <p><small><strong>{{ heroe.bio }}</strong></small></p>
         
     </div>

@@ -1,0 +1,25 @@
+<div class="col-md-12">
+    <h2>Buscando a: <small><strong>{{ termino }}</strong></small> </h2>  
+</div>
+
+<hr>
+
+<div *ngIf="heroe.length ==0 " class=" col-md-12 animated fadeIn fast">
+    No se encontraron Heroes para ese : {{ termino }}
+</div>
+
+<div class="card-columns animated fadeIn ">
+
+    <div class="card" *ngFor="let item of heroe, let i=index">
+        <!-- las [src]="heroe.img" indica que lo va a manejar angula, tambien se puede usar interpolacion src={{ heroe.img }} -->
+        <img [src]="item.img" class="card-img-top" [alt]="item.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <p class="card-text">{{ item.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ item.aparicion }}</small></p>
+
+        </div>
+    </div>
+
+
+</div>
