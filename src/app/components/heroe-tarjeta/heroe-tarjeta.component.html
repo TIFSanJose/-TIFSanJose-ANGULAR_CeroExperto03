@@ -1,0 +1,17 @@
+<div class="card" >
+    <!-- las [src]="heroe.img" indica que lo va a manejar angula, tambien se puede usar interpolacion src={{ heroe.img }} -->
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{ heroe.nombre }}</h5>
+        <p class="card-text">{{ heroe.bio }}</p>
+        <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+<!-- Creando rutas de Redireccion  -->
+<!-- 1. Mediante funcion onClick -->
+        <button 
+                (click)="verHeroe()"
+                class="btn btn-outline-primary btn-block">
+            ver mas ...
+        </button>
+    </div>
+</div>
